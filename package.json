@@ -1,0 +1,38 @@
+{
+    "name": "docsify-rtl",
+    "version": "0.1.0",
+    "description": "Docsify rtl library",
+    "main": "build/index.js",
+    "types": "build/index.d.js",
+    "scripts": {
+        "build": "tsc",
+        "clean": "rm -Rf build",
+        "pretest": "npm run build",
+        "test": "jest",
+        "test:watch": "jest --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/koliberr136a1/docsify-rtl.git"
+    },
+    "keywords": [
+        "TypeScript",
+        "docsify",
+        "rtl",
+        "bidi",
+        "bdo"
+    ],
+    "author": "KoLiBer",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/koliberr136a1/docsify-rtl/issues"
+    },
+    "homepage": "https://github.com/koliberr136a1/docsify-rtl#readme",
+    "devDependencies": {
+        "@types/jest": "^24.0.15",
+        "@types/node": "^12.0.10",
+        "jest": "^24.8.0",
+        "ts-jest": "^24.0.2",
+        "typescript": "^3.5.2"
+    }
+}
