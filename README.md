@@ -18,7 +18,7 @@
 2. Insert script into docsify document:
 
     ```html
-    <script src="//unpkg.com/docsify-rtl/build/index.js"></script>
+    <script src="//unpkg.com/docsify-rtl/build/index.min.js"></script>
     ```
 
 ## Usage
