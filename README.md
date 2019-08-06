@@ -9,6 +9,7 @@
         window.$docsify = {
             rtl: {
                 body: "rtl",
+                side: "ltr",
                 bdo: "ltr"
             }
         };
@@ -23,7 +24,7 @@
 
 ## Usage
 
-It will automatically changes the `body`, `bdo` directions
+It will automatically changes the `body`, `side`, `bdo` directions
 
 ---
 

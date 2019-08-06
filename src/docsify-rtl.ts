@@ -1,25 +1,29 @@
 export interface RTLConfig {
     body?: "rtl" | "ltr";
+    side?: "rtl" | "ltr";
     bdo?: "rtl" | "ltr";
 }
 
 export const install = (hook: any, vm: any) => {
-    const config: RTLConfig = Object.assign(
+    const config = Object.assign(
         {},
         {
-            tag: "rtl"
+            body: "rtl",
+            side: "rtl",
+            bdo: "rtl"
         },
         vm.config.rtl
     );
 
-    hook.afterEach(function(html: any, next: any) {
-        document.getElementsByName("body").forEach(item => {
-            item.dir = config.body || "rtl";
-        });
-        document.getElementsByName("bdo").forEach(item => {
-            item.dir = config.bdo || "rtl";
-        });
-
-        next(html);
+    hook.ready(function() {
+        for (let item of document.getElementsByTagName("body") as any) {
+            item.dir = config.body;
+        }
+        for (let item of document.getElementsByClassName("sidebar") as any) {
+            item.dir = config.side;
+        }
+        for (let item of document.getElementsByTagName("bdo") as any) {
+            item.dir = config.bdo;
+        }
     });
 };
