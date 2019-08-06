@@ -65,6 +65,5 @@ typings/
 api-docs/
 
 # Transpiled JavaScript files from Typescript
-/dist
 
 private
