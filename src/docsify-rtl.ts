@@ -25,5 +25,11 @@ export const install = (hook: any, vm: any) => {
         for (let item of document.getElementsByTagName("bdo") as any) {
             item.dir = config.bdo;
         }
+        for (let item of document.getElementsByTagName("pre") as any) {
+            item.dir = "ltr";
+        }
+        for (let item of document.getElementsByTagName("code") as any) {
+            item.dir = "ltr";
+        }
     });
 };
